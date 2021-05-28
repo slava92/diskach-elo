@@ -6,6 +6,16 @@ import json
 
 import elo
 
+ignore = [
+   "Zhenya",
+   "Dennis",
+   "Jeff",
+   "Gregory",
+   "Greg",
+   "David",
+   "Alex",
+]
+
 
 def main():
     """Calculate ELO standings after one round."""
@@ -28,7 +38,8 @@ def main():
     with open(options.round) as rf:
         reader = csv.DictReader(rf)
         for row in reader:
-            players.append((row['PlayerName'], row['Total']))
+            if row['PlayerName'] not in ignore:
+                players.append((row['PlayerName'], row['Total']))
 
     players = sorted(players, key=lambda r: r[1])
     prev_total = 0
