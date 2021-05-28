@@ -13,14 +13,15 @@ join_array() {
     echo "${list[*]}"
 }
 
-# data_file='../cards/UDisc Scorecards.csv'
-data_file='../cards/UDisc Scorecards_1622132448.csv'
+data_file='../cards/UDisc Scorecards.csv'
+# data_file='../cards/UDisc Scorecards_1622132448.csv'
 
 output=${data_file##*/}
 output=${output%.csv}
 mkdir -p "${output:?}"
 rm -fr "${output:?}"/*
 
+# shellcheck disable=SC2002
 cat "$data_file" | {
     read -r header
     echo "$header" >&2
@@ -35,4 +36,5 @@ cat "$data_file" | {
     done
 }
 
+# CSV header:
 # PlayerName,CourseName,LayoutName,Date,Total,+/-,Hole1,Hole2,Hole3,Hole4,Hole5,Hole6,Hole7,Hole8,Hole9,Hole10,Hole11,Hole12,Hole13,Hole14,Hole15,Hole16,Hole17,Hole18
