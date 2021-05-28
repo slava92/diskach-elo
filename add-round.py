@@ -47,7 +47,7 @@ def main():
         prev_total, prev_place = total, place
 
     if len(players) < 3:
-        print(players, file=sys.stderr)
+        # print(players, file=sys.stderr)
         new_standings = standings
     else:
         match.calculateELOs()
