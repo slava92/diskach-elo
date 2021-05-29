@@ -12,4 +12,5 @@ for round in "$data_dir"/20*.csv; do
     fi
 done
 
+python print-ratings.py standings.json --markdown > standings.md
 python print-ratings.py standings.json
