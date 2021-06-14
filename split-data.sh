@@ -13,8 +13,7 @@ join_array() {
     echo "${list[*]}"
 }
 
-data_file='../cards/UDisc Scorecards.csv'
-# data_file='../cards/UDisc Scorecards_1622132448.csv'
+data_file='../cards/2021-06-141731-MercerCountyPark-ShortsLayout-UDisc.csv'
 
 output=${data_file##*/}
 output=${output%.csv}
