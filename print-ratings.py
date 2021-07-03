@@ -13,11 +13,12 @@ def print_markdown(ranks, matches):
     for name, rank in ranks:
         count = matches[name]
         if count < MIN_GAMES:
-            rank2 = f"*{rank}\\**"
+            rank2 = f"*{rank}[^1]*"
         else:
             rank2 = rank
         print("%s|%s|%d" % (name, rank2, count))
-    pass
+    print()
+    print(f'[^1]: The rank is provisional if less than {MIN_GAMES} cards registered')
 
 
 def print_text(ranks, matches):
