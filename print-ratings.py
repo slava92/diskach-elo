@@ -9,7 +9,7 @@ MIN_GAMES = 10
 def print_markdown(ranks, matches):
     """Print ratings in markdown format."""
     print('Name|Rank|Rounds')
-    print('----|----|------')
+    print(':---|---:|-----:')
     for name, rank in ranks:
         count = matches[name]
         if count < MIN_GAMES:

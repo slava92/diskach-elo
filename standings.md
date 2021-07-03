@@ -1,5 +1,5 @@
 Name|Rank|Rounds
-----|----|------
+:---|---:|-----:
 Dima|1516|44
 Leonid Mayer |1515|36
 Timur |1515|28
