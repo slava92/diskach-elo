@@ -4,7 +4,6 @@ import argparse
 import collections
 import csv
 import json
-import sys
 
 import elo
 
