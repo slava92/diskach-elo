@@ -28,6 +28,7 @@ def main():
     match = elo.ELOMatch()
     players = []
     ignore = standings['ignore']
+    alias = standings['alias']
 
     with open(options.round) as rf:
         reader = csv.DictReader(rf)
@@ -56,7 +57,8 @@ def main():
             new_elos[name] = match.getELO(name)
             new_counters[name] += 1
 
-        new_standings = {'elo': new_elos,
+        new_standings = {'alias': alias,
+                         'elo': new_elos,
                          'ignore': ignore,
                          'matches': new_counters}
 

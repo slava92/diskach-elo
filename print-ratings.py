@@ -6,7 +6,7 @@ import json
 MIN_GAMES = 10
 
 
-def print_markdown(ranks, matches):
+def print_markdown(ranks, matches, alias):
     """Print ratings in markdown format."""
     print('Name|Rank|Rounds')
     print(':---|---:|-----:')
@@ -16,17 +16,21 @@ def print_markdown(ranks, matches):
             rank2 = f"*{rank}\\**"
         else:
             rank2 = rank
+        if name in alias:
+            name = alias[name]
         print("%s|%s|%d" % (name, rank2, count))
     print()
     print(f'*\\**: The rank is provisional if less than {MIN_GAMES} cards registered')
 
 
-def print_text(ranks, matches):
+def print_text(ranks, matches, alias):
     """Print ratings in plain text format."""
     print("%-13s\t%s%s\t%s" % ('Name', 'Rank', ' ', 'Rounds'))
     for name, rank in ranks:
         count = matches[name]
         provisional = '*' if count < MIN_GAMES else ' '
+        if name in alias:
+            name = alias[name]
         print("%-13s\t%d%s\t%3d" % (name, rank, provisional, count))
 
 
@@ -45,13 +49,14 @@ def main():
         standings = json.load(sf)
 
     # new_standings = {'elo': new_elos, 'matches': new_counters}
+    alias = standings['alias']
     elos = standings['elo']
     matches = standings['matches']
     ranks = sorted(elos.items(), key=lambda m: m[1], reverse=True)
     if options.markdown:
-        print_markdown(ranks, matches)
+        print_markdown(ranks, matches, alias)
     else:
-        print_text(ranks, matches)
+        print_text(ranks, matches, alias)
 
 
 if __name__ == '__main__':
