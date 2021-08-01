@@ -33,7 +33,11 @@ def main():
     with open(options.round) as rf:
         reader = csv.DictReader(rf)
         for row in reader:
-            if row['PlayerName'] not in ignore:
+            player = row['PlayerName']
+            if player not in ignore:
+                if player in alias:
+                    row['PlayerName'] = alias[player]
+                    player = alias[player]
                 players.append((row['PlayerName'], row['Total']))
 
     players = sorted(players, key=lambda r: r[1])

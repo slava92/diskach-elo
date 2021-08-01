@@ -1,16 +1,16 @@
 Name|Rank|Rounds
 :---|---:|-----:
-Paul S|1516|41
+Paul S|1515|43
+Dmitry Kha|1509|31
 Timur |1509|31
 Dima|1508|49
-Dmitry Kha|1506|29
-Slava|1500|16
+Leonid Mayer |1506|42
+Slava|1503|18
 Auri|*1497\**|7
-Leonid Mayer |1492|41
-Serg|1491|22
+Serg|1497|24
+Michael G|1491|23
 Zhenya|*1491\**|4
-Lenny G|*1485\**|1
+LennyG|*1485\**|2
 Andrey|*1484\**|5
-Michael G|1484|21
 
 *\**: The rank is provisional if less than 10 cards registered
