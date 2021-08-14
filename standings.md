@@ -3,10 +3,10 @@ Name|Rank|Rounds
 Slava|1515|21
 Timur |1509|31
 Dima|1508|49
-Leonid Mayer |1505|44
 Dmitry Kha|1500|32
+Leonid Mayer |1500|44
+Paul S|1500|45
 Auri|*1497\**|7
-Paul S|1495|45
 Serge|1492|25
 Zhenya|*1491\**|4
 LennyG|*1485\**|2
