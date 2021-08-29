@@ -1,6 +1,7 @@
 {"alias": {"Disc Golfer": "LennyG",
            "DimKa": "Dmitry Kha",
-           "Serg": "Serge"},
+           "Serg": "Serge",
+           "Tim": "Timur "},
  "elo": {},
  "ignore": ["Alex", "David", "Dennis", "Frank Kates", "Greg", "Gregory", "Jeff", "Par"],
  "matches": {}}
